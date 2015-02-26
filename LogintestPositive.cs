@@ -9,7 +9,7 @@ namespace Modul
 {
 
     [TestFixture()]
-    public class ModulTests
+    public class LoginTestsPositive
     {
         private IWebDriver wd;
        
@@ -24,7 +24,7 @@ namespace Modul
         
             
             [Test()]
-        public void LoginTest()
+        public void LoginTestWithValidCredentials()
         {
 
             ImplicitlyWait();

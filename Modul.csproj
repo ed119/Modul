@@ -60,7 +60,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Logintest.cs" />
+    <Compile Include="LogintestNegative.cs" />
+    <Compile Include="LogintestPositive.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
