@@ -31,8 +31,7 @@ namespace Modul
             //не забыть бы что здесь неявное ожидание в тесте
             Login("9274450648", "Maxpass5");
             Assert.IsTrue(IsNotLoginIn(), "Not logged in");
-            //LoginOut();
-            //Assert.IsTrue(IsLoginOut(), "Lending");
+            //раз не лендинг не попадаем, то проверка по полю "телефон"
         }
 
         private void ImplicitlyWait()
@@ -49,10 +48,7 @@ namespace Modul
             wd.FindElement(By.Name("password")).Clear();
             wd.FindElement(By.Name("password")).SendKeys(password);
             wd.FindElement(By.XPath("//div[@class='auth-bl']//button[.='Войти']")).Click();
-            //wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).Click();
-            //wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).Clear();
-            //wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).SendKeys(smscode);
-            //wd.FindElement(By.XPath("//div[@class='sms-bl__inner']//button[.='Подтвердить']")).Click();
+           
         }
 
         private bool IsNotLoginIn()
