@@ -23,10 +23,8 @@ namespace Modul
         }
 
 
-       
-        
-
         protected void ImplicitlyWait()
+            //неявное ожидание
         {
             wd.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
         }
@@ -60,26 +58,31 @@ namespace Modul
         }
 
         protected bool IsNotLoginIn()
+            //проверка поля телефон, когда находишься на странице авторизации
         {
             return IsElementPresent(By.Name("phone"));
         }
         protected bool IsLoginIn()
+            // проверка элемента "выйти", когда внутри
         {
             return IsElementPresent(By.CssSelector("a.b-leftmenu__exit"));
         }
 
         protected bool IsLoginOut()
+            // проверка выхода, когда разлогинился и попал на лендинг
         {
             return IsElementPresent(By.LinkText("Личный кабинет"));
         }
 
         protected bool IsElementPresent(By by)
+            //инициализируем метод проверки по элементу
         {
             return wd.FindElements(by).Count > 0;
 
         }
 
         protected void LoginOut()
+            // разлогин
         {
             wd.FindElement(By.CssSelector("a.b-leftmenu__exit")).Click();
         }
