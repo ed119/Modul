@@ -1,0 +1,11 @@
+C:\Users\Эдуард\Source\Modul\Modul\obj\Debug\Modul.csprojResolveAssemblyReference.cache
+C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\Modul.dll
+C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\Modul.pdb
+C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\nunit.framework.dll
+C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\WebDriver.dll
+C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\WebDriver.Support.dll
+C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\nunit.framework.xml
+C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\WebDriver.xml
+C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\WebDriver.Support.xml
+C:\Users\Эдуард\Source\Modul\Modul\obj\Debug\Modul.dll
+C:\Users\Эдуард\Source\Modul\Modul\obj\Debug\Modul.pdb
