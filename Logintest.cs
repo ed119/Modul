@@ -11,15 +11,22 @@ namespace Modul
     [TestFixture()]
     public class ModulTests
     {
-        [Test()]
+        private IWebDriver wd;
+       
+        [SetUp]
+        public void StartBrowser()
+        {
+            wd = new ChromeDriver();
+            wd.Navigate().GoToUrl("https://low.modulbank.ru/login");
+            // включаем неявное ожидание на все FindElement
+            
+        }
+        
+            
+            [Test()]
         public void LoginTest()
         {
-            IWebDriver wd = new ChromeDriver();
-            // включаем неявное ожидание на все FindElement
-            wd.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
-          
-                 try {
-        wd.Navigate().GoToUrl("https://low.modulbank.ru/login");
+        wd.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
         wd.FindElement(By.Name("phone")).Click();
         wd.FindElement(By.Name("phone")).Clear();
         wd.FindElement(By.Name("phone")).SendKeys("+7 927-445-06-47");
@@ -33,10 +40,16 @@ namespace Modul
         wd.FindElement(By.XPath("//div[@class='sms-bl__inner']//button[.='Подтвердить']")).Click();
         wd.FindElement(By.CssSelector("a.b-leftmenu__exit")).Click();
             }
-            finally
+        [TearDown]
+        public void StopBrowser()
+        {
+            if (wd != null)
+
             {
                 wd.Quit();
+                wd = null;
             }
+      
         }
     }
 }
