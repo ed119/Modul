@@ -1,8 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-using System;
+﻿using System;
 using NUnit.Framework;
 
 namespace Modul
@@ -24,12 +20,12 @@ namespace Modul
 
             };
 
-            ImplicitlyWait();
+            app.Auth.ImplicitlyWait();
             //не забыть бы что здесь неявное ожидание в тесте
-            LoginWithSms(account);
-            Assert.IsTrue(IsLoginIn(), "Logged in");            
-            LoginOut();
-            Assert.IsTrue(IsLoginOut(), "Lending");
+            app.Auth.LoginWithSms(account);
+            Assert.IsTrue(app.Auth.IsLoginIn(), "Logged in");            
+            app.Auth.LoginOut();
+            Assert.IsTrue(app.Auth.IsLoginOut(), "Lending");
          }
 
     }

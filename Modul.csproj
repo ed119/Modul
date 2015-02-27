@@ -62,7 +62,7 @@
   <ItemGroup>
     <Compile Include="Base.cs" />
     <Compile Include="Impl\ApplicationManager.cs" />
-    <Compile Include="Impl\Class1.cs" />
+    <Compile Include="Impl\NavigationHelper.cs" />
     <Compile Include="Impl\LoginHelper.cs" />
     <Compile Include="Model\AccountData.cs" />
     <Compile Include="WebDriverFactory.cs" />

@@ -1,8 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-using System;
+﻿using System;
 using NUnit.Framework;
 
 namespace Modul
@@ -23,10 +19,10 @@ namespace Modul
 
             };
 
-            ImplicitlyWait();
+            app.Auth.ImplicitlyWait(); 
             //не забыть бы что здесь неявное ожидание в тесте
-            LoginWithoutSms(account);
-            Assert.IsTrue(IsNotLoginIn(), "Not logged in");
+            app.Auth.LoginWithoutSms(account);
+            Assert.IsTrue(app.Auth.IsNotLoginIn(), "Not logged in");
             //раз не лендинг не попадаем, то проверка по полю "телефон"
         }
 
