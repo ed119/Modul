@@ -8,6 +8,10 @@ namespace Modul
         public ApplicationManager(ICapabilities capabilities, string baseUrl, string hubUrl)
         {
             Driver = WebDriverFactory.GetDriver(hubUrl, capabilities);
+            if (!Driver.Url.StartsWith(baseUrl))
+            {
+                Driver.Navigate().GoToUrl(baseUrl);
+            }
             BaseURL = baseUrl;
 
             Auth = new LoginHelper(this);
