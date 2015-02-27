@@ -1,5 +1,8 @@
 ﻿using System;
+using System.IO;
+using System.Collections.Generic;
 using NUnit.Framework;
+using Newtonsoft.Json;
 
 namespace Modul
 {
@@ -7,19 +10,12 @@ namespace Modul
     [TestFixture()]
     public class LoginTestsPositive : Base
     {
-     
-            
-            [Test()]
-        public void LoginTestWithValidCredentials()
+
+
+            [Test, TestCaseSource("ValidCredentials")]
+        public void LoginTestWithValidCredentials(AccountData account)
         {
-            AccountData account = new AccountData
-            {
-                phone = "9274450647",
-                password = "Maxpass5",
-                smscode = "1111"
-
-            };
-
+            
             app.Auth.ImplicitlyWait();
             //не забыть бы что здесь неявное ожидание в тесте
             app.Auth.LoginWithSms(account);
@@ -27,6 +23,11 @@ namespace Modul
             app.Auth.LoginOut();
             Assert.IsTrue(app.Auth.IsLoginOut(), "Lending");
          }
+            public static IEnumerable<AccountData> ValidCredentials()
+            {
+                return JsonConvert.DeserializeObject<List<AccountData>>(
+                    File.ReadAllText(@"data\validCredentials.json"));
+            }
 
     }
 }
