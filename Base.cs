@@ -1,19 +1,26 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-using System;
+using OpenQA.Selenium.Safari;
+using OpenQA.Selenium.PhantomJS;
 using NUnit.Framework;
 
 namespace Modul
 {
 
     [TestFixture()]
+
     public class Base
     {
-        private IWebDriver wd;
+        protected IWebDriver wd;
 
         [SetUp]
+
         public void StartBrowser()
         {
             wd = WebDriverFactory.GetDriver(DesiredCapabilities.Chrome());
@@ -24,13 +31,13 @@ namespace Modul
 
 
         protected void ImplicitlyWait()
-            //неявное ожидание
+        //неявное ожидание
         {
             wd.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
         }
 
         protected void LoginWithoutSms(string phone, string password)
-            // метод для негативного теста, до получения смс кода 
+        // метод для негативного теста, до получения смс кода 
         {
             wd.FindElement(By.Name("phone")).Click();
             wd.FindElement(By.Name("phone")).Clear();
@@ -42,7 +49,7 @@ namespace Modul
 
         }
         protected void LoginWithSms(string phone, string password, string smscode)
-            // метод для теста с получением смс кода 
+        // метод для теста с получением смс кода 
         {
             wd.FindElement(By.Name("phone")).Click();
             wd.FindElement(By.Name("phone")).Clear();
@@ -58,36 +65,36 @@ namespace Modul
         }
 
         protected bool IsNotLoginIn()
-            //проверка поля телефон, когда находишься на странице авторизации
+        //проверка поля телефон, когда находишься на странице авторизации
         {
             return IsElementPresent(By.Name("phone"));
         }
         protected bool IsLoginIn()
-            // проверка элемента "выйти", когда внутри
+        // проверка элемента "выйти", когда внутри
         {
             return IsElementPresent(By.CssSelector("a.b-leftmenu__exit"));
         }
 
         protected bool IsLoginOut()
-            // проверка выхода, когда разлогинился и попал на лендинг
+        // проверка выхода, когда разлогинился и попал на лендинг
         {
             return IsElementPresent(By.LinkText("Личный кабинет"));
         }
 
         protected bool IsElementPresent(By by)
-            //инициализируем метод проверки по элементу
+        //инициализируем метод проверки по элементу
         {
             return wd.FindElements(by).Count > 0;
 
         }
 
         protected void LoginOut()
-            // разлогин
+        // разлогин.
         {
             wd.FindElement(By.CssSelector("a.b-leftmenu__exit")).Click();
         }
 
 
-       
+
     }
 }
