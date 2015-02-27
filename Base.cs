@@ -16,7 +16,7 @@ namespace Modul
         [SetUp]
         public void StartBrowser()
         {
-            wd = new ChromeDriver();
+            wd = WebDriverFactory.GetDriver(DesiredCapabilities.Chrome());
             wd.Navigate().GoToUrl("https://low.modulbank.ru/login");
 
 
@@ -88,15 +88,6 @@ namespace Modul
         }
 
 
-        [TearDown]
-        protected void StopBrowser()
-        {
-            if (wd != null)
-            {
-                wd.Quit();
-                wd = null;
-            }
-
-        }
+       
     }
 }
