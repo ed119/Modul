@@ -13,14 +13,19 @@ namespace Modul
     {
       
 
-
         [Test()]
         public void LoginTestWithInvalidCredentials()
         {
+            AccountData account = new AccountData
+            {
+                phone = "9274450648",
+                password = "Maxpass5"
+
+            };
 
             ImplicitlyWait();
             //не забыть бы что здесь неявное ожидание в тесте
-            LoginWithoutSms("9274450648", "Maxpass5");
+            LoginWithoutSms(account);
             Assert.IsTrue(IsNotLoginIn(), "Not logged in");
             //раз не лендинг не попадаем, то проверка по полю "телефон"
         }

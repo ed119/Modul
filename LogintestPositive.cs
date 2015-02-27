@@ -16,10 +16,17 @@ namespace Modul
             [Test()]
         public void LoginTestWithValidCredentials()
         {
+            AccountData account = new AccountData
+            {
+                phone = "9274450647",
+                password = "Maxpass5",
+                smscode = "1111"
+
+            };
 
             ImplicitlyWait();
             //не забыть бы что здесь неявное ожидание в тесте
-            LoginWithSms("9274450647", "Maxpass5", "1111");
+            LoginWithSms(account);
             Assert.IsTrue(IsLoginIn(), "Logged in");            
             LoginOut();
             Assert.IsTrue(IsLoginOut(), "Lending");

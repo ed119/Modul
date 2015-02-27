@@ -61,6 +61,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Base.cs" />
+    <Compile Include="Model\AccountData.cs" />
     <Compile Include="WebDriverFactory.cs" />
     <Compile Include="Finalizer.cs" />
     <Compile Include="LogintestNegative.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

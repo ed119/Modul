@@ -36,31 +36,31 @@ namespace Modul
             wd.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
         }
 
-        protected void LoginWithoutSms(string phone, string password)
+        protected void LoginWithoutSms(AccountData account)
         // метод для негативного теста, до получения смс кода 
         {
             wd.FindElement(By.Name("phone")).Click();
             wd.FindElement(By.Name("phone")).Clear();
-            wd.FindElement(By.Name("phone")).SendKeys(phone);
+            wd.FindElement(By.Name("phone")).SendKeys(account.phone);
             wd.FindElement(By.Name("password")).Click();
             wd.FindElement(By.Name("password")).Clear();
-            wd.FindElement(By.Name("password")).SendKeys(password);
+            wd.FindElement(By.Name("password")).SendKeys(account.password);
             wd.FindElement(By.XPath("//div[@class='auth-bl']//button[.='Войти']")).Click();
 
         }
-        protected void LoginWithSms(string phone, string password, string smscode)
+        protected void LoginWithSms(AccountData account)
         // метод для теста с получением смс кода 
         {
             wd.FindElement(By.Name("phone")).Click();
             wd.FindElement(By.Name("phone")).Clear();
-            wd.FindElement(By.Name("phone")).SendKeys(phone);
+            wd.FindElement(By.Name("phone")).SendKeys(account.phone);
             wd.FindElement(By.Name("password")).Click();
             wd.FindElement(By.Name("password")).Clear();
-            wd.FindElement(By.Name("password")).SendKeys(password);
+            wd.FindElement(By.Name("password")).SendKeys(account.password);
             wd.FindElement(By.XPath("//div[@class='auth-bl']//button[.='Войти']")).Click();
             wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).Click();
             wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).Clear();
-            wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).SendKeys(smscode);
+            wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).SendKeys(account.smscode);
             wd.FindElement(By.XPath("//div[@class='sms-bl__inner']//button[.='Подтвердить']")).Click();
         }
 
