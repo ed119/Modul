@@ -69,6 +69,11 @@
     <Compile Include="Impl\NavigationHelper.cs" />
     <Compile Include="Impl\LoginHelper.cs" />
     <Compile Include="Model\AccountData.cs" />
+    <Compile Include="pages\AnyPage.cs" />
+    <Compile Include="pages\UserProfilePage.cs" />
+    <Compile Include="pages\LoginPage.cs" />
+    <Compile Include="pages\InternalPage.cs" />
+    <Compile Include="pages\PageManager.cs" />
     <Compile Include="WebDriverFactory.cs" />
     <Compile Include="Finalizer.cs" />
     <Compile Include="LogintestNegative.cs" />
