@@ -26,10 +26,16 @@ namespace Modul
         public IWebElement SubmitButton;
 
         public bool IsOnThisPage()
-        
+
             //проверка поля телефон, когда находишься на странице авторизации
         {
             return IsElementPresent(By.Name("phone"));
+        }
+
+        public bool IsOnThisPageAlert()
+        {
+            return IsElementPresent(By.CssSelector(".reg-step__valid"));
+            //проверка по появившейся валидахе
         }
         
     }

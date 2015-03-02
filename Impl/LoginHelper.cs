@@ -13,22 +13,26 @@ namespace Modul
         public ApplicationManager manager;
         public PageManager pages;
 
-        public LoginHelper(PageManager manager)
+        public LoginHelper(ApplicationManager manager)
         {
-            //this.manager = manager;
-            this.pages = manager;
+            this.manager = manager;
+            this.pages = manager.Pages;
         }
 
         public void LoginWithoutSms(AccountData account)
         {
+            pages.Login.PhoneField.Clear();
             pages.Login.PhoneField.SendKeys(account.phone);
+            pages.Login.PasswordField.Clear();
             pages.Login.PasswordField.SendKeys(account.password);
             pages.Login.GiveMeCode.Click();
         }
 
         public void LoginWithSms(AccountData account)
         {
+            pages.Login.PhoneField.Clear();
             pages.Login.PhoneField.SendKeys(account.phone);
+            pages.Login.PasswordField.Clear();
             pages.Login.PasswordField.SendKeys(account.password);
             pages.Login.GiveMeCode.Click();
             pages.Login.SmsCode.SendKeys(account.smscode);
@@ -47,6 +51,13 @@ namespace Modul
         {
             return pages.Login.IsOnThisPage();
         }
+
+        public bool IsNotLoginAlert()
+        {
+            return pages.Login.IsOnThisPageAlert();
+            //по цсс селектору поле с валидахой, когда пароль не прошел
+        }
+
          public bool IsLoginOut()
         // проверка выхода, когда разлогинился и попал на лендинг
         {

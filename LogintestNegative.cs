@@ -18,8 +18,8 @@ namespace Modul
 
 
             app.Auth.LoginWithoutSms(account);
-            Assert.IsTrue(app.Auth.IsNotLoginIn(), "Not logged in");
-            //раз не лендинг не попадаем, то проверка по полю "телефон"
+            Assert.IsTrue(app.Auth.IsNotLoginAlert(), "Not logged in");
+            //проверка по появившейся валидахе
         }
             
       public static IEnumerable<AccountData> InvalidCredentials()
