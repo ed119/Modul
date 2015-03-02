@@ -1,83 +1,64 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 
 namespace Modul
 {
     public class LoginHelper
     {
-        private ApplicationManager manager;
-        private IWebDriver wd;
+        public ApplicationManager manager;
+        public PageManager pages;
 
-        public LoginHelper(ApplicationManager manager)
+        public LoginHelper(PageManager manager)
         {
-            this.manager = manager;
-            this.wd = manager.Driver;
+            //this.manager = manager;
+            this.pages = manager;
         }
+
         public void LoginWithoutSms(AccountData account)
-        // метод для негативного теста, до получения смс кода 
         {
-            wd.FindElement(By.Name("phone")).Click();
-            wd.FindElement(By.Name("phone")).Clear();
-            wd.FindElement(By.Name("phone")).SendKeys(account.phone);
-            wd.FindElement(By.Name("password")).Click();
-            wd.FindElement(By.Name("password")).Clear();
-            wd.FindElement(By.Name("password")).SendKeys(account.password);
-            wd.FindElement(By.XPath("//div[@class='auth-bl']//button[.='Войти']")).Click();
+            pages.Login.PhoneField.SendKeys(account.phone);
+            pages.Login.PasswordField.SendKeys(account.password);
+            pages.Login.GiveMeCode.Click();
+        }
 
-        }
         public void LoginWithSms(AccountData account)
-        // метод для теста с получением смс кода 
         {
-            wd.FindElement(By.Name("phone")).Click();
-            wd.FindElement(By.Name("phone")).Clear();
-            wd.FindElement(By.Name("phone")).SendKeys(account.phone);
-            wd.FindElement(By.Name("password")).Click();
-            wd.FindElement(By.Name("password")).Clear();
-            wd.FindElement(By.Name("password")).SendKeys(account.password);
-            wd.FindElement(By.XPath("//div[@class='auth-bl']//button[.='Войти']")).Click();
-            wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).Click();
-            wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).Clear();
-            wd.FindElement(By.XPath("//div[@class='sms-bl__inner']/div/input")).SendKeys(account.smscode);
-            wd.FindElement(By.XPath("//div[@class='sms-bl__inner']//button[.='Подтвердить']")).Click();
+            pages.Login.PhoneField.SendKeys(account.phone);
+            pages.Login.PasswordField.SendKeys(account.password);
+            pages.Login.GiveMeCode.Click();
+            pages.Login.SmsCode.SendKeys(account.smscode);
+            pages.Login.SubmitButton.Click();
         }
-        public void ImplicitlyWait()
-        //неявное ожидание, пока сюда, но надо создать отдельный хелпер
-        {
-            wd.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
-        }
-        public bool IsNotLoginIn()
-        //проверка поля телефон, когда находишься на странице авторизации
-        {
-            return IsElementPresent(By.Name("phone"));
-        }
+
+        
         public bool IsLoginIn()
         // проверка элемента "выйти", когда внутри
         {
-            return IsElementPresent(By.CssSelector("a.b-leftmenu__exit"));
+            return pages.Internal.IsOnThisPage();
         }
 
-        public bool IsLoginOut()
+        public bool IsNotLoginIn()
+        //проверка поля телефон, когда находишься на странице авторизации
+        {
+            return pages.Login.IsOnThisPage();
+        }
+         public bool IsLoginOut()
         // проверка выхода, когда разлогинился и попал на лендинг
         {
-            return IsElementPresent(By.LinkText("Личный кабинет"));
+            return pages.Lending.IsOnThisPage();
+             //здесь нужен лендинг
         }
 
-        public bool IsElementPresent(By by)
-        //инициализируем метод проверки по элементу
-        {
-            return wd.FindElements(by).Count > 0;
-
-        }
-
-        public void LoginOut()
+         public void LoginOut()
         // разлогин.
         {
-            wd.FindElement(By.CssSelector("a.b-leftmenu__exit")).Click();
+           pages.Internal.LogoutLink.Click();
         }
-
-
-
-
+        
     }
 }
-

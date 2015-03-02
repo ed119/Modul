@@ -15,9 +15,7 @@ namespace Modul
             [Test, TestCaseSource("ValidCredentials")]
         public void LoginTestWithValidCredentials(AccountData account)
         {
-            
-            app.Auth.ImplicitlyWait();
-            //не забыть бы что здесь неявное ожидание в тесте
+           
             app.Auth.LoginWithSms(account);
             Assert.IsTrue(app.Auth.IsLoginIn(), "Logged in");            
             app.Auth.LoginOut();

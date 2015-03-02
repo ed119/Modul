@@ -16,8 +16,7 @@ namespace Modul
         public void LoginTestWithInvalidCredentials(AccountData account)
         {
 
-            app.Auth.ImplicitlyWait();
-            //не забыть бы что здесь неявное ожидание в тесте
+
             app.Auth.LoginWithoutSms(account);
             Assert.IsTrue(app.Auth.IsNotLoginIn(), "Not logged in");
             //раз не лендинг не попадаем, то проверка по полю "телефон"

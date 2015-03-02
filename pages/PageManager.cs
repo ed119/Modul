@@ -7,13 +7,14 @@ namespace Modul
 {
     public class PageManager
     {
-        private IWebDriver driver;
+        public IWebDriver driver;
 
         public PageManager(OpenQA.Selenium.IWebDriver Driver)
         {
             this.driver = Driver;
             Login = InitElements(new LoginPage(this));
             Internal = InitElements(new InternalPage(this));
+            Lending = InitElements(new LendingPage(this));
             UserProfile = InitElements(new UserProfilePage(this));
         }
 
@@ -24,6 +25,8 @@ namespace Modul
         }
 
         public InternalPage Internal { get; set; }
+
+        public LendingPage Lending { get; set; }
 
         public LoginPage Login { get; set; }
 

@@ -25,6 +25,8 @@ namespace Modul
             get;
             set;
         }
+
+        
         public override string ToString()
         {
             return "phone=" + phone +", password=" + password;
