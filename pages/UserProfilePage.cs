@@ -10,7 +10,7 @@ namespace Modul
 {
     public class UserProfilePage : InternalPage
     {
-        public UserProfilePage(PageManager pageManager)
+        public UserProfilePage(PagesCollection pageManager)
             : base(pageManager)
         {
         }

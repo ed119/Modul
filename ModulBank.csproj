@@ -65,16 +65,17 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Base.cs" />
-    <Compile Include="Impl\ApplicationManager.cs" />
-    <Compile Include="Impl\LoginHelper.cs" />
-    <Compile Include="Impl\NavigationHelper.cs" />
+    <Compile Include="Impl\Application.cs" />
+    <Compile Include="Impl\AuthModul.cs" />
+    <Compile Include="Impl\BaseModul.cs" />
+    <Compile Include="Impl\NavigationModul.cs" />
     <Compile Include="Model\AccountData.cs" />
     <Compile Include="pages\AnyPage.cs" />
     <Compile Include="pages\LendingPage.cs" />
     <Compile Include="pages\UserProfilePage.cs" />
     <Compile Include="pages\LoginPage.cs" />
     <Compile Include="pages\InternalPage.cs" />
-    <Compile Include="pages\PageManager.cs" />
+    <Compile Include="pages\PagesCollection.cs" />
     <Compile Include="WebDriverFactory.cs" />
     <Compile Include="Finalizer.cs" />
     <Compile Include="LogintestNegative.cs" />

@@ -10,7 +10,7 @@ namespace Modul
 {
     public class LendingPage : AnyPage
     {
-        public LendingPage(PageManager pageManager)
+        public LendingPage(PagesCollection pageManager)
             : base(pageManager)
         {
         }

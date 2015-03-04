@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Modul
 {
-    public class NavigationHelper
+    public class NavigationModul
     {
-        private ApplicationManager manager;
+        private Application manager;
 
-        public NavigationHelper(ApplicationManager manager)
+        public NavigationModul(Application manager)
         {
             this.manager = manager;
         }

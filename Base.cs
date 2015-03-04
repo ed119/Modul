@@ -13,12 +13,12 @@ namespace Modul
     public class Base
     {
 
-       protected ApplicationManager app;
+       protected Application app;
 
             [SetUp]
             public void StartApplication()
             {
-                app = new ApplicationManager(DesiredCapabilities.Chrome(), "https://low.modulbank.ru/login", null);
+                app = new Application(DesiredCapabilities.Chrome(), "https://low.modulbank.ru/login", null);
             }
            
         }

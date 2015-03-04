@@ -8,15 +8,12 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace Modul
 {
-    public class LoginHelper
-    {
-        public ApplicationManager manager;
-        public PageManager pages;
+    public class AuthModul : BaseModul
 
-        public LoginHelper(ApplicationManager manager)
+    {
+              
+        public AuthModul(PagesCollection pages): base(pages)
         {
-            this.manager = manager;
-            this.pages = manager.Pages;
         }
 
         public void LoginWithoutSms(AccountData account)

@@ -6,11 +6,11 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace Modul
 {
-    public class PageManager
+    public class PagesCollection
     {
         public IWebDriver driver;
         internal string baseUrl;
-        public PageManager(ICapabilities capabilities, string baseUrl, string hubUrl)
+        public PagesCollection(ICapabilities capabilities, string baseUrl, string hubUrl)
         {
             driver = WebDriverFactory.GetDriver(hubUrl, capabilities);
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));

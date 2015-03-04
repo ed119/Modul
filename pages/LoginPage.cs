@@ -10,7 +10,7 @@ namespace Modul
 {
     public class LoginPage : AnyPage
     {
-        public LoginPage(PageManager pageManager)
+        public LoginPage(PagesCollection pageManager)
             : base(pageManager)
         {
         }

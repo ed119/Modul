@@ -10,7 +10,7 @@ namespace Modul
 {
     public class InternalPage : AnyPage
     {
-        public InternalPage(PageManager pageManager)
+        public InternalPage(PagesCollection pageManager)
             : base(pageManager)
         {
         }

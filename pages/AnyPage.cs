@@ -9,9 +9,9 @@ namespace Modul
 {
     public class AnyPage
     {
-        private PageManager pageManager;
+        private PagesCollection pageManager;
 
-        public AnyPage(PageManager pageManager)
+        public AnyPage(PagesCollection pageManager)
         {
             this.pageManager = pageManager;
         }
