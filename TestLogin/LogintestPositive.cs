@@ -10,7 +10,7 @@ namespace Modul
     [TestFixture()]
     public class LoginTestsPositive : Base
     {
-
+        
 
             [Test, TestCaseSource("ValidCredentials")]
         public void LoginTestWithValidCredentials(AccountData account)
@@ -19,7 +19,7 @@ namespace Modul
             app.Auth.LoginWithSms(account);
             Assert.IsTrue(app.Auth.IsLoginIn(), "Logged in");            
             app.Auth.LoginOut();
-            Assert.IsTrue(app.Auth.IsLoginOut(), "Lending");
+            Assert.IsTrue(app.Auth.IsNotLoginIn(), "LoginPage"); 
          }
             public static IEnumerable<AccountData> ValidCredentials()
             {

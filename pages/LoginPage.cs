@@ -18,13 +18,14 @@ namespace Modul
         public IWebElement PhoneField;
         [FindsBy(How = How.Name, Using = "password")]
         public IWebElement PasswordField;
-        [FindsBy(How = How.XPath, Using = "//div[@class='auth-bl']//button[.='Войти']")]
+        [FindsBy(How = How.XPath, Using = @"//form[@name='form']/div[4]/button[1]")]
         public IWebElement GiveMeCode;
         [FindsBy(How = How.XPath, Using = "//div[@class='sms-bl__inner']/div/input")]
         public IWebElement SmsCode;
         [FindsBy(How = How.XPath, Using = "//div[@class='sms-bl__inner']//button[.='Подтвердить']")]
         public IWebElement SubmitButton;
-
+        
+        // "//div[@class='auth-bl']//button[.='Войти']"
         public bool IsOnThisPage()
 
             //проверка поля телефон, когда находишься на странице авторизации

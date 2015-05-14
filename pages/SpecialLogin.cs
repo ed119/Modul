@@ -8,11 +8,15 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace Modul
 {
-    public class UserProfilePage : DashBoardPage
+    public class SupportLoginPage : AnyPage
+   
+        
     {
-        public UserProfilePage(PagesCollection pageManager)
+        
+        public SupportLoginPage(PagesCollection pageManager)
             : base(pageManager)
         {
         }
     }
 }
+

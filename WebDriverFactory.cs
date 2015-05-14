@@ -157,7 +157,9 @@ namespace Modul
             }
             if (browserType == DesiredCapabilities.Chrome().BrowserName)
             {
-                return new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.AddArguments("--start-maximized");
+                return new ChromeDriver(options);
             }
             if (browserType == DesiredCapabilities.Safari().BrowserName)
             {

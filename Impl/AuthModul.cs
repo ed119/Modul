@@ -14,13 +14,16 @@ namespace Modul
               
         public AuthModul(PagesCollection pages): base(pages)
         {
+            
         }
 
         public void LoginWithoutSms(AccountData account)
         {
             pages.Login.PhoneField.Clear();
+            //поле телефона при фокусе не очищается
             pages.Login.PhoneField.SendKeys(account.phone);
-            pages.Login.PasswordField.Clear();
+            //pages.Login.PasswordField.Clear();
+            //баг с очисткой поля пофиксили
             pages.Login.PasswordField.SendKeys(account.password);
             pages.Login.GiveMeCode.Click();
         }
@@ -40,7 +43,7 @@ namespace Modul
         public bool IsLoginIn()
         // проверка элемента "выйти", когда внутри
         {
-            return pages.Internal.IsOnThisPage();
+            return pages.DashBoard.IsOnThisPage();
         }
 
         public bool IsNotLoginIn()
@@ -65,7 +68,7 @@ namespace Modul
          public void LoginOut()
         // разлогин.
         {
-           pages.Internal.LogoutLink.Click();
+           pages.DashBoard.LogoutLink.Click();
         }
         
     }

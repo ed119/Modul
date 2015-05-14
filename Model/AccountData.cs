@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace Modul
 {
+    public class Credentials
+    {
+        //login + password
+    }
+
     public class AccountData
         //новый класс для именования параметров
     {
+        //Логин
         public string phone
         {
             get;
@@ -21,6 +27,25 @@ namespace Modul
         }
 
         public string smscode
+        {
+            get;
+            set;
+        }
+
+        //платежка
+        public string FieldCorrName
+        {
+            get;
+            set;
+        }
+
+        public string FieldDescription
+        {
+            get;
+            set;
+        }
+
+        public string FieldAmount
         {
             get;
             set;

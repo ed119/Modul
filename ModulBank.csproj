@@ -65,21 +65,32 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Base.cs" />
+    <Compile Include="Impl\ActionOnDocs.cs" />
+    <Compile Include="pages\DocumentsPage.cs" />
+    <Compile Include="TestsFunctional\CreateNewPayment100k.cs" />
+    <Compile Include="TestsFunctional\uploadFile.cs" />
+    <Compile Include="TestsFunctional\CreateNewPayment.cs" />
     <Compile Include="Impl\Application.cs" />
     <Compile Include="Impl\AuthModul.cs" />
     <Compile Include="Impl\BaseModul.cs" />
+    <Compile Include="Impl\ActionOnDashBoardModul.cs" />
+    <Compile Include="Impl\ActionOnPayments.cs" />
     <Compile Include="Impl\NavigationModul.cs" />
+    <Compile Include="TestsFunctional\SetTask.cs" />
+    <Compile Include="TestLogin\LogeddInPay.cs" />
     <Compile Include="Model\AccountData.cs" />
     <Compile Include="pages\AnyPage.cs" />
+    <Compile Include="pages\PaymentsPage.cs" />
+    <Compile Include="pages\SpecialLogin.cs" />
     <Compile Include="pages\LendingPage.cs" />
     <Compile Include="pages\UserProfilePage.cs" />
     <Compile Include="pages\LoginPage.cs" />
-    <Compile Include="pages\InternalPage.cs" />
+    <Compile Include="pages\DashBoard.cs" />
     <Compile Include="pages\PagesCollection.cs" />
     <Compile Include="WebDriverFactory.cs" />
     <Compile Include="Finalizer.cs" />
-    <Compile Include="LogintestNegative.cs" />
-    <Compile Include="LogintestPositive.cs" />
+    <Compile Include="TestLogin\LogintestNegative.cs" />
+    <Compile Include="TestLogin\LogintestPositive.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,7 +99,18 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="bin\Debug\Data\StaffCredentials.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Data\CredentialsForPayments.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Data\RegCredentials.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Data\StaffCreentials100k.json" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

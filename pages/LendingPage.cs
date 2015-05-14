@@ -15,8 +15,8 @@ namespace Modul
         {
         }
 
-        //[FindsBy(How = How.LinkText, Using = "Личный кабинет")]
-        //public IWebElement LogoutLink;
+        [FindsBy(How = How.LinkText, Using = "Личный кабинет")]
+        public IWebElement LogoutLink;
          
         public bool IsOnThisPage()
         {
