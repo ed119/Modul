@@ -24,6 +24,9 @@ namespace Modul
         public IWebElement SmsCode;
         [FindsBy(How = How.XPath, Using = "//div[@class='sms-bl__inner']//button[.='Подтвердить']")]
         public IWebElement SubmitButton;
+        [FindsBy(How = How.Id, Using = "notyetregistered")]
+        public IWebElement Notyetreg;
+
         
         // "//div[@class='auth-bl']//button[.='Войти']"
         public bool IsOnThisPage()

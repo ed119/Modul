@@ -20,6 +20,7 @@ namespace Modul
            pages.Payments.FieldCorrName.Clear();
            pages.Payments.FieldCorrName.SendKeys(account.FieldCorrName);
            pages.Payments.DropOldCorr.Click();
+           System.Threading.Thread.Sleep(5000);
            pages.Payments.FieldDescription.Clear();
            pages.Payments.FieldDescription.SendKeys(account.FieldDescription);
            pages.Payments.FieldAmount.Clear();
@@ -40,8 +41,10 @@ namespace Modul
             pages.Payments.FieldCorrName.Clear();
             pages.Payments.FieldCorrName.SendKeys(account.FieldCorrName);
             pages.Payments.DropOldCorr.Click();
+            System.Threading.Thread.Sleep(2000);
             pages.Payments.FieldDescription.Clear();
             pages.Payments.FieldDescription.SendKeys("тут название платежа");
+            System.Threading.Thread.Sleep(2000);
             pages.Payments.FieldAmount.Clear();
             pages.Payments.FieldAmount.SendKeys(account.FieldAmount);
             pages.Payments.ButtonNextToSubscribe.Click();

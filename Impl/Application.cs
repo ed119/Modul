@@ -20,6 +20,7 @@ namespace Modul
             ActionOnDash = new ActionOnDashBoard(Pages);
             ActionOnPay = new ActionOnPayments(Pages);
             ActionOnDocs = new ActionOnDocuments(Pages);
+            ActionOnReg = new ActionRegs(Pages);
         }
 
         
@@ -34,5 +35,7 @@ namespace Modul
         public ActionOnPayments ActionOnPay { get; set; }
 
         public ActionOnDocuments ActionOnDocs { get; set; }
+
+        public ActionRegs ActionOnReg { get; set; }
     }
 }

@@ -39,6 +39,18 @@ namespace Modul
             pages.Login.SubmitButton.Click();
         }
 
+        //public void GoToStartReg (AccountData accont)
+        //    //перешел на начало регистрации
+        //{
+        //    pages.Login.Notyetreg.Click();
+        //}
+
+        //public void RegWithOutOgrn (AccountData accont)
+        //{
+        //    pages.RegN.SurNameReg.Clear();
+        //    pages.RegN.SurNameReg.SendKeys();
+
+        //}
         
         public bool IsLoginIn()
         // проверка элемента "выйти", когда внутри

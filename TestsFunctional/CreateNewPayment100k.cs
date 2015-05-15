@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace Modul
 {
-
+     [TestFixture()]
     class CreateNewPayment100k : Base
     {
 

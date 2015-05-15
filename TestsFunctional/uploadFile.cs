@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 
 namespace Modul
 {
+     [TestFixture()]
     class uploadFile : Base
     {
         [Test, TestCaseSource("StaffCredentials")]
