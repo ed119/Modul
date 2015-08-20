@@ -1,4 +1,3 @@
-C:\Users\Эдуард\Source\Modul\Modul\obj\Debug\ModulBank.csprojResolveAssemblyReference.cache
 C:\Users\Эдуард\Source\Modul\Modul\obj\Debug\Modul.dll
 C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\Modul.dll
 C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\Modul.pdb
@@ -11,3 +10,16 @@ C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\nunit.framework.xml
 C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\WebDriver.xml
 C:\Users\Эдуард\Source\Modul\Modul\bin\Debug\WebDriver.Support.xml
 C:\Users\Эдуард\Source\Modul\Modul\obj\Debug\Modul.pdb
+C:\Users\Эдуард\Source\Modul\Modul\obj\Debug\ModulBank.csprojResolveAssemblyReference.cache
+D:\учеба\Modul\Modul\bin\Debug\Modul.dll
+D:\учеба\Modul\Modul\bin\Debug\Modul.pdb
+D:\учеба\Modul\Modul\bin\Debug\Newtonsoft.Json.dll
+D:\учеба\Modul\Modul\bin\Debug\nunit.framework.dll
+D:\учеба\Modul\Modul\bin\Debug\WebDriver.dll
+D:\учеба\Modul\Modul\bin\Debug\WebDriver.Support.dll
+D:\учеба\Modul\Modul\bin\Debug\Newtonsoft.Json.xml
+D:\учеба\Modul\Modul\bin\Debug\nunit.framework.xml
+D:\учеба\Modul\Modul\bin\Debug\WebDriver.xml
+D:\учеба\Modul\Modul\bin\Debug\WebDriver.Support.xml
+D:\учеба\Modul\Modul\obj\Debug\Modul.dll
+D:\учеба\Modul\Modul\obj\Debug\Modul.pdb

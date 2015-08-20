@@ -21,9 +21,9 @@ namespace Modul
                 app.Auth.LoginWithSms(account);
                 Assert.IsTrue(app.Auth.IsLoginIn(), "Logged in");
                 app.ActionOnDash.PassToPayments();
-                Assert.IsTrue(app.ActionOnPay.IhaveLinkNewPay(), "I`m on payments page");
-                app.ActionOnPay.CreateNewPayment();
-                Assert.IsTrue(app.ActionOnPay.IhaveFieldCorrName(), "I created a new payment");
+                //Assert.IsTrue(app.ActionOnPay.IhaveLinkNewPay(), "I`m on payments page");
+                //app.ActionOnPay.CreateNewPayment();
+                //Assert.IsTrue(app.ActionOnPay.IhaveFieldCorrName(), "I created a new payment");
                 app.ActionOnPay.FillInFormPayment(account);
                 Assert.IsTrue(app.ActionOnPay.IhaveRepeatPayLink(), "I subscribe new payment");
                 app.Auth.LoginOut();
@@ -41,18 +41,7 @@ namespace Modul
             
             
             
-            //{
-        //    var creds = JsonConvert.DeserializeObject<List<AccountData>>(
-        //        File.ReadAllText(@"data\Credentials123.json"));
-        //    var text = File.ReadAllText(@"data\StaffCredentials.json");
-        //    Debug.Print("Account DATA READ: " + text);
-        //    return JsonConvert.DeserializeObject<List<AccountData>>(text);
-        //}
-        //public static IEnumerable<AccountData> CredentialsForPayments()
-        //{
-        //    return JsonConvert.DeserializeObject<List<AccountData>>
-        //        (File.ReadAllText(@"data\CredentialsForPayments.json"));
-        //}
+       
 
     }
 }

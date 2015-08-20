@@ -15,6 +15,7 @@ namespace Modul
         public void TestSetTask(AccountData account)
         //пользователь с деньгами
         {
+            
 
             app.Auth.LoginWithSms(account);
             Assert.IsTrue(app.Auth.IsLoginIn(), "Logged in");

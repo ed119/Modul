@@ -16,7 +16,7 @@ namespace Modul
           
             Pages = new PagesCollection(capabilities, baseUrl, hubUrl);
             Auth = new AuthModul(Pages);
-            Navigator = new NavigationModul(this);
+            //Navigator = new NavigationModul(this);
             ActionOnDash = new ActionOnDashBoard(Pages);
             ActionOnPay = new ActionOnPayments(Pages);
             ActionOnDocs = new ActionOnDocuments(Pages);
@@ -27,7 +27,7 @@ namespace Modul
 
         public AuthModul Auth { get; set; }
        
-        public NavigationModul Navigator { get; set; }
+        //public NavigationModul Navigator { get; set; }
 
         private PagesCollection Pages { get; set; }
 

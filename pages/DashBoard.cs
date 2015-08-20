@@ -26,8 +26,12 @@ namespace Modul
         public IWebElement LinkDocs;
 
         //иконка банк левое меню
-        [FindsBy(How = How.CssSelector, Using = "span.b-leftmenu__icon.b-leftmenu__icon--bank")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div[1]/div/div[2]/div[2]/a[2]/div")]
         public IWebElement BankIcon;
+
+        // иконка в хедере "создать новый платеж"
+        [FindsBy(How = How.CssSelector, Using = ".b-db-icon.b-db-icon--payment")] 
+        public IWebElement CreateNewPayment;
 
 
         //ссылка платеж в меню, после нажатия на иконку банк

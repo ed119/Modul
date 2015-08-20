@@ -26,8 +26,8 @@ namespace Modul
        
         public void PassToPayments()
         {
-            pages.DashBoard.BankIcon.Click();
-            pages.DashBoard.LinkPayments.Click();
+            pages.DashBoard.CreateNewPayment.Click();
+            
         }
         
         

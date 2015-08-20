@@ -1,25 +1,38 @@
 ﻿using System.Text;
 using System;
+using System.Security.Policy;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 
 namespace Modul
 {
     public class PagesCollection
     {
+
         public IWebDriver driver;
         internal string baseUrl;
         public PagesCollection(ICapabilities capabilities, string baseUrl, string hubUrl)
         {
             driver = WebDriverFactory.GetDriver(hubUrl, capabilities);
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(25));
             //не явное ожидание тут пока
+            
             if (!driver.Url.StartsWith(baseUrl))
             {
                 driver.Navigate().GoToUrl(baseUrl);
+                if (driver.Url != baseUrl)
+                {
+                    WebDriverFactory.DismissAll();
+
+                }
+                
             }
             this.baseUrl = baseUrl;
+           
+            
 
 
             Login = InitElements(new LoginPage(this));

@@ -14,19 +14,19 @@ namespace Modul
         public RegName(PagesCollection pageManager)
             : base(pageManager)
         { }
-        [FindsBy(How = How.Id, Using = "reg-base:contact:surname")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div/div/section[2]/div[1]/form/div[1]/div[1]/input")]
         public IWebElement SurNameReg;
 
-        [FindsBy(How = How.Id, Using = "reg-base:contact:name")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div/div/section[2]/div[1]/form/div[1]/div[2]/input")]
         public IWebElement NameReg;
 
-        [FindsBy(How = How.Id, Using = "reg-base:contact:phone")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div/div/section[2]/div[1]/form/div[3]/div[1]/input")]
         public IWebElement PhoneReg;
 
         [FindsBy(How = How.Id, Using = "reg-base:contact:mail")]
         public IWebElement MailReg;
 
-        [FindsBy(How = How.Id, Using = "s2id_reg-base:contact:city")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div/div/section[2]/div[1]/form/div[3]/div[2]/div[1]/a")]
         public IWebElement SelectCityReg;
 
         [FindsBy(How = How.CssSelector, Using = "#select2-result-label-3")]
@@ -40,7 +40,7 @@ namespace Modul
         [FindsBy(How = How.Id, Using = "reg-base:contact:sms-input")]
         public IWebElement SmsInputReg;
 
-        [FindsBy(How = How.Id, Using = "reg-base:contact:sms-next")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div/div/section[2]/div[1]/form/div[6]/div/div/div/button")]
         public IWebElement BtnSmsNext;
     
     

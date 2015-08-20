@@ -21,8 +21,8 @@ namespace Modul
             app.Auth.LoginWithSms(account);
             Assert.IsTrue(app.Auth.IsLoginIn(), "Logged in");
             app.ActionOnDash.PassToPayments();
-            Assert.IsTrue(app.ActionOnPay.IhaveLinkNewPay(), "I`m on payments page");
-            app.ActionOnPay.CreateNewPayment();
+            //Assert.IsTrue(app.ActionOnPay.IhaveLinkNewPay(), "I`m on payments page");
+            //app.ActionOnPay.CreateNewPayment();
             Assert.IsTrue(app.ActionOnPay.IhaveFieldCorrName(), "I created a new payment");
             app.ActionOnPay.FillInFormPayment100k(account);
             Assert.IsTrue(app.ActionOnPay.IhaveRepeatPayLink(), "I subscribe new payment");

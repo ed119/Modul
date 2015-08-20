@@ -149,7 +149,10 @@ namespace Modul
             string browserType = capabilities.BrowserName;
             if (browserType == DesiredCapabilities.Firefox().BrowserName)
             {
-                return new FirefoxDriver();
+                FirefoxDriver driver = new FirefoxDriver();
+                driver.Manage().Window.Maximize();
+                return driver;
+
             }
             if (browserType == DesiredCapabilities.InternetExplorer().BrowserName)
             {

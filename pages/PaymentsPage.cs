@@ -43,16 +43,29 @@ namespace Modul
         public IWebElement FieldDescription;
 
         //кнопка "далее" когда все заполнено (стр создания платежа)
-        [FindsBy(How = How.XPath, Using = "//div[@class='payment-create__common-fields']//button[normalize-space(.)='Далее']")]
+        [FindsBy(How = How.CssSelector, Using = ".btn.btn-light-blue.btn--padd-middle")]
         public IWebElement ButtonNextToSubscribe;
 
         //кнопка "подписать платеж" (стр создания платежа)
-        [FindsBy(How = How.XPath, Using = "//div[@class='b-dashboard__middle']//button[.='Подписать']")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div[3]/section/div[1]/div/div[1]/div[4]/div[1]/div/button")]
         public IWebElement ButtonSubscribe;
 
-        //ЭТО УБРАТЬ! ПОКА ТАК!
+        
         [FindsBy(How = How.LinkText, Using = "ооо проыпвпыв")]
         public IWebElement DropOldCorr;
+
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/section/section/div/div[1]/div/form/div[1]/div[3]/span[2]/label")] 
+        public IWebElement RadioBtnTaxes;
+
+        [FindsBy(How = How.LinkText, Using = "Межрайонная инспекция Федеральной налоговой службы №2 по Республике Адыгея")]
+        public IWebElement DropTaxLink;
+
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/section/section/div/div[1]/div/form/div[1]/div[8]/input")]
+        public IWebElement KbkField;
+
+
+
+
 
 
 
@@ -71,7 +84,7 @@ namespace Modul
 
         public bool HaveRepeatPaymentsLink()
         {
-            return IsElementPresent(By.LinkText("Повторить платеж"));
+            return IsElementPresent(By.XPath("html/body/div[1]/div/div[3]/section/div[1]/div/div[2]/div/a/span"));
         }
     
     }

@@ -51,6 +51,10 @@ namespace Modul
             set;
         }
 
+        public string FieldCorrNameTaxes { get; set; }
+
+        public string KbkTaxes { get; set; }
+
         //reg
 
         public string SurName { get; set; }

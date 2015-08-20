@@ -20,19 +20,15 @@ namespace Modul
            pages.Payments.FieldCorrName.Clear();
            pages.Payments.FieldCorrName.SendKeys(account.FieldCorrName);
            pages.Payments.DropOldCorr.Click();
-           System.Threading.Thread.Sleep(5000);
+           System.Threading.Thread.Sleep(2000);
            pages.Payments.FieldDescription.Clear();
            pages.Payments.FieldDescription.SendKeys(account.FieldDescription);
            pages.Payments.FieldAmount.Clear();
            pages.Payments.FieldAmount.SendKeys(account.FieldAmount);
            pages.Payments.ButtonNextToSubscribe.Click();
+           System.Threading.Thread.Sleep(2000);
            pages.Payments.ButtonSubscribe.Click();
-            //int.Parse - если строка корректная, то он превращает её в число
-           //var FieldAmount = A;
-           // if (A > 100000)
-           //{
-           //    //найти поле и сделать с ним  чегото
-           //}
+        
 
         }
 
@@ -43,15 +39,39 @@ namespace Modul
             pages.Payments.DropOldCorr.Click();
             System.Threading.Thread.Sleep(2000);
             pages.Payments.FieldDescription.Clear();
-            pages.Payments.FieldDescription.SendKeys("тут название платежа");
+            pages.Payments.FieldDescription.SendKeys(account.FieldDescription);
             System.Threading.Thread.Sleep(2000);
             pages.Payments.FieldAmount.Clear();
             pages.Payments.FieldAmount.SendKeys(account.FieldAmount);
             pages.Payments.ButtonNextToSubscribe.Click();
             pages.Payments.ButtonSubscribe.Click();
-            pages.Payments.PaySmsField.SendKeys("1111");
+            System.Threading.Thread.Sleep(500);
+            pages.Payments.PaySmsField.SendKeys(account.smscode);
+            System.Threading.Thread.Sleep(500);
             pages.Payments.PayConfirmButton.Click();
 
+        }
+
+        public void FillFormForTaxes(AccountData account)
+        {
+            pages.Payments.FieldCorrName.Clear();
+            pages.Payments.FieldCorrName.SendKeys(account.FieldCorrNameTaxes);
+            pages.Payments.DropTaxLink.Click();
+            System.Threading.Thread.Sleep(2000);
+            pages.Payments.KbkField.Clear();
+            pages.Payments.KbkField.SendKeys(account.KbkTaxes);
+            pages.Payments.FieldDescription.Clear();
+            pages.Payments.FieldDescription.SendKeys(account.FieldDescription);
+            System.Threading.Thread.Sleep(2000);
+            pages.Payments.FieldAmount.Clear();
+            pages.Payments.FieldAmount.SendKeys(account.FieldAmount);
+            pages.Payments.ButtonNextToSubscribe.Click();
+            pages.Payments.ButtonSubscribe.Click();
+            //System.Threading.Thread.Sleep(500);
+            //pages.Payments.PaySmsField.SendKeys(account.smscode);
+            System.Threading.Thread.Sleep(3000);
+            pages.Payments.ButtonSubscribe.Click();
+            System.Threading.Thread.Sleep(1000);
         }
         
         

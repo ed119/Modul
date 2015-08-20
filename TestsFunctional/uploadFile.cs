@@ -19,7 +19,7 @@ namespace Modul
         Assert.IsTrue(app.ActionOnDocs.ICanUpload(), "можно загружать");
         app.ActionOnDocs.AttachedNewDoc();
         Assert.IsTrue(app.ActionOnDocs.NewFileLoaded(), "новый файл загружен");
-        Assert.IsTrue(app.ActionOnDocs.ElementIsDownloaded(), "вижу иконку загруженного файла");
+        //Assert.IsTrue(app.ActionOnDocs.ElementIsDownloaded(), "вижу иконку загруженного файла");
         //app.ActionOnDocs.DeleteLastDoc();
         //Assert.IsFalse(app.ActionOnDocs.NewFileLoaded(), "новый файл загружен");
         

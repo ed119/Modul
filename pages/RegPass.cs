@@ -14,13 +14,13 @@ namespace Modul
             : base(pageManager)
         { }
 
-        [FindsBy(How = How.Id, Using = "reg-base:password:pass-one-input")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div/div/div[2]/div/section/form/div[2]/div[1]/input")]
         public IWebElement PassInputOneReg;
 
-        [FindsBy(How = How.Id, Using = "reg-base:password:pass-two-input")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div/div/div[2]/div/section/form/div[3]/div/input")]
         public IWebElement PassInputTwoReg;
 
-        [FindsBy(How = How.Id, Using = "reg-base:password:enter")]
+        [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div/div/div[2]/div/section/form/div[4]/button")]
         public IWebElement BtnRegOver;
 
     }

@@ -71,9 +71,13 @@
     <Compile Include="pages\RegDataCompany.cs" />
     <Compile Include="pages\RegName.cs" />
     <Compile Include="pages\RegPass.cs" />
+    <Compile Include="TestReg\TestFakeOgrn.cs" />
+    <Compile Include="TestReg\TestNotMyOgrn.cs" />
+    <Compile Include="TestReg\TestRegNotMyCompany.cs" />
     <Compile Include="TestReg\TestRgWoutOgr.cs" />
     <Compile Include="TestReg\TestWithOgrn.cs" />
     <Compile Include="TestsFunctional\CreateNewPayment100k.cs" />
+    <Compile Include="TestsFunctional\CreateNewPayTaxes.cs" />
     <Compile Include="TestsFunctional\uploadFile.cs" />
     <Compile Include="TestsFunctional\CreateNewPayment.cs" />
     <Compile Include="Impl\Application.cs" />
