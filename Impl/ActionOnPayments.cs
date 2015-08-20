@@ -69,9 +69,9 @@ namespace Modul
             pages.Payments.ButtonSubscribe.Click();
             //System.Threading.Thread.Sleep(500);
             //pages.Payments.PaySmsField.SendKeys(account.smscode);
-            System.Threading.Thread.Sleep(3000);
-            pages.Payments.ButtonSubscribe.Click();
-            System.Threading.Thread.Sleep(1000);
+            //System.Threading.Thread.Sleep(3000);
+            //pages.Payments.ButtonSubscribe.Click();
+            //System.Threading.Thread.Sleep(1000);
         }
         
         

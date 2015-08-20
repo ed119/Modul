@@ -20,8 +20,8 @@ namespace Modul
             app.ActionOnDash.PassToPayments();
             app.ActionOnPay.FillFormForTaxes(account);
             Assert.IsTrue(app.ActionOnPay.IhaveRepeatPayLink(), "I subscribe new payment");
-            //app.Auth.LoginOut();
-            //Assert.IsTrue(app.Auth.IsNotLoginIn(), "LoginPage");
+            app.Auth.LoginOut();
+            Assert.IsTrue(app.Auth.IsNotLoginIn(), "LoginPage");
         }
 
         public static IEnumerable<AccountData> StaffCredentials()
