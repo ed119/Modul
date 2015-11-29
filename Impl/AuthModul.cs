@@ -19,13 +19,7 @@ namespace Tooktodo
 
         public void LoginWithoutSms(AccountData account)
         {
-        //    pages.Login.PhoneField.Clear();
-        //    //поле телефона при фокусе не очищается
-        //    pages.Login.PhoneField.SendKeys(account.phone);
-        //    //pages.Login.PasswordField.Clear();
-        //    //баг с очисткой поля пофиксили
-        //    pages.Login.PasswordField.SendKeys(account.password);
-        //    pages.Login.GiveMeCode.Click();
+        
         }
 
         //public void LoginWithSms(AccountData account)
