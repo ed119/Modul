@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace Modul
+namespace Tooktodo
 {
     public class Application
     {
@@ -17,10 +17,7 @@ namespace Modul
             Pages = new PagesCollection(capabilities, baseUrl, hubUrl);
             Auth = new AuthModul(Pages);
             //Navigator = new NavigationModul(this);
-            ActionOnDash = new ActionOnDashBoard(Pages);
-            ActionOnPay = new ActionOnPayments(Pages);
-            ActionOnDocs = new ActionOnDocuments(Pages);
-            ActionOnReg = new ActionRegs(Pages);
+           
         }
 
         
@@ -31,11 +28,6 @@ namespace Modul
 
         private PagesCollection Pages { get; set; }
 
-        public ActionOnDashBoard ActionOnDash { get; set; }
-        public ActionOnPayments ActionOnPay { get; set; }
-
-        public ActionOnDocuments ActionOnDocs { get; set; }
-
-        public ActionRegs ActionOnReg { get; set; }
+      
     }
 }

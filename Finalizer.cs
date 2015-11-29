@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace Modul
+namespace Tooktodo
 {
     [SetUpFixture]
     //класс с таким атрибутом может быть только один!

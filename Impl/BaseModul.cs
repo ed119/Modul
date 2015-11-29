@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace Modul
+namespace Tooktodo
 {
     public abstract class BaseModul
     {

@@ -9,7 +9,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Safari;
 using OpenQA.Selenium.PhantomJS;
 
-namespace Modul
+namespace Tooktodo
 {
     public class WebDriverFactory
     {

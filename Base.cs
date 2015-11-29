@@ -6,18 +6,17 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 
-namespace Modul
+namespace Tooktodo
 {
     public class BaseWithStaff : Base
     {
         protected override string Url
 
-            //заменяем точку входа (override - переписать)
-            //тесты будут группироваться по родителям
+          
         {
             get
             {
-                return "http://beat24.igsystems.ru/login/staff/";
+                return "#";
             }
 
         }
@@ -35,7 +34,7 @@ namespace Modul
         {
             get
             {
-                return "https://accountlow.modulbank.ru/";
+                return "http://tooktodo.igstest.ru/login";
             }
         }
 
@@ -51,8 +50,7 @@ namespace Modul
                 app = new Application(DesiredCapabilities.Firefox(), Url, null);
                 
                 
-                //меняем логику, для возможности использовать разные точки входа
-                //app = new Application(DesiredCapabilities.Chrome(), "https://accountlow.modulbank.ru/login", null);
+              
             }
            
         }

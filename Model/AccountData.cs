@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modul
+namespace Tooktodo
 {
     public class Credentials
     {
@@ -12,10 +12,10 @@ namespace Modul
     }
 
     public class AccountData
-        //новый класс для именования параметров
+        
     {
         //Логин
-        public string phone
+        public string email
         {
             get;
             set;
@@ -26,56 +26,14 @@ namespace Modul
             set;
         }
 
-        public string smscode
-        {
-            get;
-            set;
-        }
 
-        //платежка
-        public string FieldCorrName
-        {
-            get;
-            set;
-        }
-
-        public string FieldDescription
-        {
-            get;
-            set;
-        }
-
-        public string FieldAmount
-        {
-            get;
-            set;
-        }
-
-        public string FieldCorrNameTaxes { get; set; }
-
-        public string KbkTaxes { get; set; }
-
-        //reg
-
-        public string SurName { get; set; }
-        public string Name { get; set; }
-
-        public string PhoneNumber { get; set; }
-
-        public string Mail { get; set; }
-
-        public string Ogrn { get; set; }
-
-        public string PassOne { get; set; }
-
-        public string PassTwo { get; set; }
         
 
 
         
         public override string ToString()
         {
-            return "phone=" + phone +", password=" + password;
+            return "email" + email +", password=" + password;
         }
     }
 }

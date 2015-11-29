@@ -6,7 +6,7 @@
     <ProjectGuid>{6D0598E4-248C-4CE9-9911-9E3A5FAAA9BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Modul</RootNamespace>
+    <RootNamespace>Tooktodo</RootNamespace>
     <AssemblyName>Modul</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -39,16 +39,35 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter">
+      <HintPath>packages\NUnitTestAdapter.WithFramework.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
-    <Reference Include="WebDriver">
-      <HintPath>..\packages\Selenium.WebDriver.2.44.0\lib\net40\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=2.48.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Selenium.WebDriver.2.48.2\lib\net40\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support">
-      <HintPath>..\packages\Selenium.Support.2.44.0\lib\net40\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support, Version=2.48.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Selenium.Support.2.48.2\lib\net40\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
@@ -65,37 +84,13 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Base.cs" />
-    <Compile Include="Impl\ActionOnDocs.cs" />
-    <Compile Include="Impl\ActionRegs.cs" />
-    <Compile Include="pages\DocumentsPage.cs" />
-    <Compile Include="pages\RegDataCompany.cs" />
-    <Compile Include="pages\RegName.cs" />
-    <Compile Include="pages\RegPass.cs" />
-    <Compile Include="TestReg\TestFakeOgrn.cs" />
-    <Compile Include="TestReg\TestNotMyOgrn.cs" />
-    <Compile Include="TestReg\TestRegNotMyCompany.cs" />
-    <Compile Include="TestReg\TestRgWoutOgr.cs" />
-    <Compile Include="TestReg\TestWithOgrn.cs" />
-    <Compile Include="TestsFunctional\CreateNewPayment100k.cs" />
-    <Compile Include="TestsFunctional\CreateNewPayTaxes.cs" />
-    <Compile Include="TestsFunctional\uploadFile.cs" />
-    <Compile Include="TestsFunctional\CreateNewPayment.cs" />
     <Compile Include="Impl\Application.cs" />
     <Compile Include="Impl\AuthModul.cs" />
     <Compile Include="Impl\BaseModul.cs" />
-    <Compile Include="Impl\ActionOnDashBoardModul.cs" />
-    <Compile Include="Impl\ActionOnPayments.cs" />
     <Compile Include="Impl\NavigationModul.cs" />
-    <Compile Include="TestsFunctional\SetTask.cs" />
-    <Compile Include="TestLogin\LogeddInPay.cs" />
     <Compile Include="Model\AccountData.cs" />
     <Compile Include="pages\AnyPage.cs" />
-    <Compile Include="pages\PaymentsPage.cs" />
-    <Compile Include="pages\SpecialLogin.cs" />
-    <Compile Include="pages\LendingPage.cs" />
-    <Compile Include="pages\UserProfilePage.cs" />
     <Compile Include="pages\LoginPage.cs" />
-    <Compile Include="pages\DashBoard.cs" />
     <Compile Include="pages\PagesCollection.cs" />
     <Compile Include="WebDriverFactory.cs" />
     <Compile Include="Finalizer.cs" />
@@ -104,22 +99,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Data\InvalidCredentials.json" />
-    <None Include="bin\Debug\Data\ValidCredentials.json" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Data\StaffCredentials.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Data\CredentialsForPayments.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Data\RegCredentials.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Data\StaffCreentials100k.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Data\DataForReg.json" />

@@ -24,3 +24,15 @@ D:\учеба\Modul\Modul\bin\Debug\WebDriver.Support.xml
 D:\учеба\Modul\Modul\obj\Debug\Modul.dll
 D:\учеба\Modul\Modul\obj\Debug\Modul.pdb
 D:\учеба\Modul\Modul\obj\Debug\ModulBank.csprojResolveAssemblyReference.cache
+C:\work\Modul\bin\Debug\Modul.dll
+C:\work\Modul\bin\Debug\Modul.pdb
+C:\work\Modul\bin\Debug\Newtonsoft.Json.dll
+C:\work\Modul\bin\Debug\nunit.framework.dll
+C:\work\Modul\bin\Debug\WebDriver.dll
+C:\work\Modul\bin\Debug\WebDriver.Support.dll
+C:\work\Modul\bin\Debug\nunit.framework.xml
+C:\work\Modul\bin\Debug\WebDriver.xml
+C:\work\Modul\bin\Debug\WebDriver.Support.xml
+C:\work\Modul\obj\Debug\Modul.dll
+C:\work\Modul\obj\Debug\Modul.pdb
+C:\work\Modul\obj\Debug\ModulBank.csprojResolveAssemblyReference.cache
