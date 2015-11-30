@@ -27,7 +27,7 @@ namespace Tooktodo
             pages.Login.LastNameField.Clear();
             pages.Login.LastNameField.SendKeys("Tests");
             pages.Login.EmailField.Clear();
-            pages.Login.EmailField.SendKeys("ed@ed2.ed");
+            pages.Login.EmailField.SendKeys("igtest510@yandex.ru");
             pages.Login.PasswordField.Clear();
             pages.Login.PasswordField.SendKeys("123456");
             pages.Login.SubmitButton.Click();
@@ -40,9 +40,9 @@ namespace Tooktodo
              
             pages.driver.Navigate().GoToUrl("https://mail.yandex.ru/");
             pages.Mail.LoginElement.Clear();
-            pages.Mail.LoginElement.SendKeys("emustakimow");
+            pages.Mail.LoginElement.SendKeys("igtest510");
             pages.Mail.PasswordElement.Clear();
-            pages.Mail.PasswordElement.SendKeys("28092007");
+            pages.Mail.PasswordElement.SendKeys("123123");
             pages.Mail.EnterButton.Click();
             pages.Mail.MyLetterElement.Click();
             pages.Mail.BeginWorkButton.Click();
@@ -58,6 +58,16 @@ namespace Tooktodo
             pages.Login.SinginButtonElement.Click();
         }
 
+        public void SignInAfterConfirm(AccountData account)
+        {
+            pages.driver.Navigate().GoToUrl("http://tooktodo.igstest.ru/login");
+            pages.Login.EmailSigninElement.Clear();
+            pages.Login.EmailSigninElement.SendKeys("igtest509@yandex.ru");
+            pages.Login.PassSigninElement.Clear();
+            pages.Login.PassSigninElement.SendKeys("123456");
+            pages.Login.SinginButtonElement.Click();
+        }
+
         public void SignOut(AccountData account)
         {
             
@@ -65,6 +75,14 @@ namespace Tooktodo
             pages.Dash.ExitDropdownElement.Click();
         }
 
+        public void SignInToCreateProj(AccountData account)
+        {
+            pages.Login.EmailSigninElement.Clear();
+            pages.Login.EmailSigninElement.SendKeys("igtest509@yandex.ru");
+            pages.Login.PassSigninElement.Clear();
+            pages.Login.PassSigninElement.SendKeys("123456");
+            pages.Login.SinginButtonElement.Click();
+        }
 
 
 

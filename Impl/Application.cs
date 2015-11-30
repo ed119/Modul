@@ -19,6 +19,7 @@ namespace Tooktodo
             Pages = new PagesCollection(capabilities, baseUrl, hubUrl);
             Auth = new AuthModul(Pages);
             //Navigator = new NavigationModul(this);
+            Dash = new ActionOnDash(Pages);
            
         }
 
@@ -29,6 +30,7 @@ namespace Tooktodo
         //public NavigationModul Navigator { get; set; }
 
         private PagesCollection Pages { get; set; }
+        public ActionOnDash Dash { get; set; }
 
       
     }

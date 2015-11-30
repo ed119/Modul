@@ -43,6 +43,9 @@ namespace Tooktodo
         [FindsBy(How = How.XPath, Using = "html/body/div[1]/div[2]/div/div/div[2]/div/div[1]/form/div[8]/input")] 
         public IWebElement CreateProjButton;
 
+        [FindsBy(How = How.XPath, Using = ".//*[@id='ui-select-choices-row-1-0']/a")]
+        public IWebElement RegionName;
+
 
     }
 }

@@ -95,6 +95,7 @@
     <Compile Include="pages\LoginPage.cs" />
     <Compile Include="pages\MailPage.cs" />
     <Compile Include="pages\PagesCollection.cs" />
+    <Compile Include="TestLogin\CreateNewProjectTest.cs" />
     <Compile Include="TestLogin\RegistrationTest.cs" />
     <Compile Include="WebDriverFactory.cs" />
     <Compile Include="Finalizer.cs" />

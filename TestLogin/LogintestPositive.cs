@@ -21,7 +21,7 @@ namespace Tooktodo
             
             {
                 app.Auth.SignIn(account);
-                Thread.Sleep(5000);
+                Thread.Sleep(10000);
                 app.Auth.SignOut(account);
                 
                 //Assert.IsTrue(app.Auth.IsLoginIn(), "Logged in");
