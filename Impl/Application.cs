@@ -10,10 +10,12 @@ namespace Tooktodo
 {
     public class Application
     {
-       
+        private IWebDriver driver;
+
         public Application(ICapabilities capabilities, string baseUrl, string hubUrl)
         {
-          
+            driver = driver;
+
             Pages = new PagesCollection(capabilities, baseUrl, hubUrl);
             Auth = new AuthModul(Pages);
             //Navigator = new NavigationModul(this);

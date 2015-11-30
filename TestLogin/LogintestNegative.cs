@@ -12,7 +12,7 @@ namespace Tooktodo
     {
 
 
-        [Test, TestCaseSource("InvalidCredentials")]
+        [Test, TestCaseSource("DataForReg")]
         public void LoginTestWithInvalidCredentials(AccountData account)
         {
 

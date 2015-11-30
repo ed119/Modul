@@ -16,24 +16,26 @@ namespace Tooktodo
     {
         
 
-            [Test, TestCaseSource("ValidCredentials")]
+            [Test, TestCaseSource("DataForReg")]
         public void LoginTestWithValidCredentials(AccountData account)
             
             {
-             
-            //app.Auth.LoginWithSms(account);
-            //Assert.IsTrue(app.Auth.IsLoginIn(), "Logged in");
+                app.Auth.SignIn(account);
+                Thread.Sleep(5000);
+                app.Auth.SignOut(account);
+                
+                //Assert.IsTrue(app.Auth.IsLoginIn(), "Logged in");
 
-            //app.Auth.LoginOut();
-            //Assert.IsTrue(app.Auth.IsNotLoginIn(), "LoginPage"); 
+                //app.Auth.LoginOut();
+                //Assert.IsTrue(app.Auth.IsNotLoginIn(), "LoginPage"); 
             
          }
-    
-            //public static IEnumerable<AccountData> ValidCredentials()
-            //{
-            //    return JsonConvert.DeserializeObject<List<AccountData>>(
-            //        File.ReadAllText(@"data\validCredentials.json"));
-            //}
+
+            public static IEnumerable<AccountData> DataForReg()
+            {
+                return JsonConvert.DeserializeObject<List<AccountData>>(
+                    File.ReadAllText(@"data\DataForReg.json"));
+            }
 
     }
 }

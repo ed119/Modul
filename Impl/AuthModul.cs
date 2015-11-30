@@ -1,37 +1,127 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+using System.Diagnostics;
+using System.Threading;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Firefox;
 
 namespace Tooktodo
 {
     public class AuthModul : BaseModul
     {
+        
 
         public AuthModul(PagesCollection pages)
             : base(pages)
         {
-
+            
+            
         }
 
-        public void LoginWithoutSms(AccountData account)
+
+        public void Registration(AccountData account)
         {
-        
+            pages.Login.TabRegistration.Click();
+            pages.Login.NameField.Clear();
+            pages.Login.NameField.SendKeys("Test");
+            pages.Login.LastNameField.Clear();
+            pages.Login.LastNameField.SendKeys("Tests");
+            pages.Login.EmailField.Clear();
+            pages.Login.EmailField.SendKeys("ed@ed2.ed");
+            pages.Login.PasswordField.Clear();
+            pages.Login.PasswordField.SendKeys("123456");
+            pages.Login.SubmitButton.Click();
+            
         }
 
-        //public void LoginWithSms(AccountData account)
-        //{
-        //    pages.Login.PhoneField.Clear();
-        //    pages.Login.PhoneField.SendKeys(account.phone);
-        //    pages.Login.PasswordField.Clear();
-        //    pages.Login.PasswordField.SendKeys(account.password);
-        //    pages.Login.GiveMeCode.Click();
-        //    pages.Login.SmsCode.SendKeys(account.smscode);
-        //    pages.Login.SubmitButton.Click();
-        //}
+        public void GoToMyMail(AccountData account)
+        {
+            
+             
+            pages.driver.Navigate().GoToUrl("https://mail.yandex.ru/");
+            pages.Mail.LoginElement.Clear();
+            pages.Mail.LoginElement.SendKeys("emustakimow");
+            pages.Mail.PasswordElement.Clear();
+            pages.Mail.PasswordElement.SendKeys("28092007");
+            pages.Mail.EnterButton.Click();
+            pages.Mail.MyLetterElement.Click();
+            pages.Mail.BeginWorkButton.Click();
+
+        }
+
+        public void SignIn(AccountData account)
+        {
+            pages.Login.EmailSigninElement.Clear();
+            pages.Login.EmailSigninElement.SendKeys("emustakimow@yandex.ru");
+            pages.Login.PassSigninElement.Clear();
+            pages.Login.PassSigninElement.SendKeys("123456");
+            pages.Login.SinginButtonElement.Click();
+        }
+
+        public void SignOut(AccountData account)
+        {
+            
+            pages.Dash.DropDownElement.Click();
+            pages.Dash.ExitDropdownElement.Click();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //public void GoToStartReg (AccountData accont)
         //    //перешел на начало регистрации

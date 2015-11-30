@@ -2,28 +2,12 @@
 using System;
 using NUnit.Framework;
 using Newtonsoft.Json;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 
 namespace Tooktodo
 {
-    public class BaseWithStaff : Base
-    {
-        protected override string Url
-
-          
-        {
-            get
-            {
-                return "#";
-            }
-
-        }
-
-    }
-
-
+    
 
     [TestFixture()]
     public class Base
@@ -38,7 +22,9 @@ namespace Tooktodo
             }
         }
 
+       
        protected Application app;
+        
        
 
             [SetUp]
@@ -49,12 +35,13 @@ namespace Tooktodo
            
                 app = new Application(DesiredCapabilities.Firefox(), Url, null);
                 
-                
-              
-            }
+
+
+
+       }
            
         }
-    }
+}
 
     
     

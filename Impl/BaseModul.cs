@@ -12,7 +12,7 @@ namespace Tooktodo
     {
         protected PagesCollection pages;
 
-        public BaseModul(PagesCollection pages)
+        protected BaseModul(PagesCollection pages)
         {
             this.pages = pages;
         }

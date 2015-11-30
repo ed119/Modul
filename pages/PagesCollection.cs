@@ -36,7 +36,9 @@ namespace Tooktodo
 
 
             Login = InitElements(new LoginPage(this));
-           
+            Mail = InitElements(new MailPage(this));
+            Dash = InitElements(new DashboardPage(this));
+
         }
 
         private T InitElements<T>(T page) where T : AnyPage
@@ -48,6 +50,11 @@ namespace Tooktodo
        
 
         public LoginPage Login { get; set; }
+
+        public MailPage Mail { get; set; }
+
+        public DashboardPage Dash { get; set; }
+
 
      
     }
